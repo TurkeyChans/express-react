@@ -10,13 +10,8 @@ app.get('/', (req, res) => {
     res.send("Server running funtionally")
 })
 
-app.post('/api', (req, res) => {
-    console.log(req.body.username, req.body.name)
-    res.send(req.body)
-})
-
-app.get('/message', (req, res)=>{
-    res.send("Hello from our server!")
+app.get('/test', (req, res)=>{
+    res.send("Server is operational")
 })
 
 app.listen(port, ()=> {
