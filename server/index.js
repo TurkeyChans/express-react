@@ -3,7 +3,8 @@ const express = require('express')
 const app = express()
 
 const port = 3000
-//http://localhost:3000/cat
+
+//http://localhost:3000/cat.jpg
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
