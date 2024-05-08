@@ -6,9 +6,12 @@ const port = 3000
 
 //http://localhost:3000/cat.jpg
 app.use(express.static('public'))
+//1:28:33
+const root = require('path').join(__dirname, '../client', 'dist')
+app.use(express.static(root))
 
 app.get('/', (req, res) => {
-    res.send("Server running funtionally")
+    res.sendFile('index.html', { root })
 })
 
 app.get('/test', (req, res)=>{
